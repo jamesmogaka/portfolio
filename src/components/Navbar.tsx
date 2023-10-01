@@ -37,7 +37,12 @@ export const Navbar: React.FC<Iprops> = (props) => {
     `;
     //
     //Holds the links to the various pages of my portfolio
-    const Navigation = styled.div``;
+    const Navigation = styled.div`
+        font-size: 50px;
+        color: black;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke: 1px #000000;
+    `;
     //
     //Holds the links to various social platforms
     const Contact = styled.div``;

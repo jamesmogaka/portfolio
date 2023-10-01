@@ -1,12 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 import Map from './Map';
-import Form from './form';
+import Form from './Form';
 //
 //Create customized container
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
+    display: flex;
+    Form {
+        flex-basis: 10%;
+    }
+    Map {
+        flex-basis: 80%;
+    }
 `;
 //
 //Create contact-me page component
