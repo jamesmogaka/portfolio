@@ -10,7 +10,6 @@ const Styled_geography = styled(Geography)`
 //
 //Hide the overflow of the map
 const Map_container = styled.div`
-    overflow: hidden;
     height: 100vh;
     margin: 0px;
     padding: 0px;
