@@ -38,10 +38,10 @@ function App() {
   return (
     <Container>
       <Navbar logo_src={logo_src} pages={pages} contact={contact} />
-      {/* <Home />
+      <Home />
       <About />
       <Portfolio />
-      <Contact /> */}
+      <Contact />
     </Container>
   );
 }

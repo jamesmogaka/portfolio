@@ -86,6 +86,10 @@ export const Navbar: React.FC<Iprops> = (props) => {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 20%;
   `;
   //
   //Map the platform to its icon
