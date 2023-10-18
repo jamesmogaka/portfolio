@@ -6,7 +6,7 @@ const Container: React.FC<{ children: React.ReactNode }> = styled.form`
     width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 30px;
     * {
@@ -30,12 +30,12 @@ const Container: React.FC<{ children: React.ReactNode }> = styled.form`
     button {
         height: 30px;
         width: 50%;
+        align-self: center;
         border: none;
         border-radius: 10px;
     }
 `;
 const Title: React.FC<{ children: React.ReactNode }> = styled.h1`
-    text-align: center;
     font-weight: 200;
     padding: 0;
     margin: 0;
