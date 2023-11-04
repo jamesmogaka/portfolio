@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Map from './Map';
 import Form from './Form';
+import Destination from './Destination';
 //
 //Create customized container
 const Section: React.FC<{ children: React.ReactNode }> = styled.div`
@@ -10,17 +11,17 @@ const Section: React.FC<{ children: React.ReactNode }> = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
+    /* gap: 50px; */
 `;
 //
 //Style the form side
 const Left: React.FC<{ children: React.ReactNode }> = styled.div`
-    flex: 1;
+    flex: 1 1;
 `;
 //
 //Style the map
 const Right: React.FC<{ children: React.ReactNode }> = styled.div`
-    flex: 1;
+    flex: 1 1;
 `;
 //
 //Create contact-me page component
@@ -35,6 +36,7 @@ const Contact: React.FC = () => {
             <Right>
                 <Map></Map>
             </Right>
+            {/* <Destination /> */} 
         </Section>
     );
 };

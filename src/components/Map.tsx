@@ -4,13 +4,15 @@ import {
     ComposableMap,
     Geographies,
     Geography,
-    Annotation,
+    Marker,
 } from 'react-simple-maps';
 import styled from 'styled-components';
+import Destination from './Destination';
 //
 //Styling the map
 const Styled_geography = styled(Geography)`
-    fill: black;
+    fill: transparent;
+    stroke: black;
 `;
 //
 // //Hide the overflow of the map
@@ -26,12 +28,12 @@ const Styled_geography = styled(Geography)`
 //TODO: Style the map !!!
 const Map: React.FC = () => (
     <ComposableMap
-        width={1000}
-        height={1000}
+        width={500}
+        height={600}
         projection="geoAzimuthalEqualArea"
         projectionConfig={{
-            rotate: [-10.0, -52.0, 0],
             scale: 400,
+            center: [17.05291, 2.07035],
         }}
     >
         <Geographies geography="/features.json">
@@ -41,18 +43,16 @@ const Map: React.FC = () => (
                 ))
             }
         </Geographies>
-        <Annotation
-            subject={[36.8219, -1.2864]}
-            dx={40}
-            dy={-20}
-            connectorProps={{
-                stroke: '#FF5533',
-                strokeWidth: 3,
-                strokeLinecap: 'round',
-            }}
+
+        <Marker
+            coordinates={[36.8219, 1.2921]}
+            style={{ default: { fill: 'none' } }}
         >
-            {'Nairobi'}
-        </Annotation>
+            {/* <Destination /> */}
+            <circle r={100} fill="transparent">
+                <Destination />
+            </circle>
+        </Marker>
     </ComposableMap>
 );
 
