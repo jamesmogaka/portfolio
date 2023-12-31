@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+src/assets/profile.jpg
+src/assets/CV (1).pdf
