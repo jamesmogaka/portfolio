@@ -4,12 +4,15 @@ import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import styled from "styled-components";
 import { Navbar } from "./components/Navbar";
+import bg from "./assets/shape.svg";
 
 //
 //Create a customized container
 const Container = styled.div`
+  padding: 0px;
+  margin: 0px;
   height: 100vh;
-  background-color: #f5f5f5;
+  background: url(${bg}) center/cover no-repeat;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   overflow-y: auto;
