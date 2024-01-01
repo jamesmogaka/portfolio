@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;
+  padding-top: 50px;
 `;
 //
 //Create a page to showcase my current and previous works

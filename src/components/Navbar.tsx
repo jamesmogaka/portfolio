@@ -1,6 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import { Instagram, Twitter, GitHub, Linkedin } from 'react-feather';
+import React from "react";
+import styled from "styled-components";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+} from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
+import { Instagram, Twitter, GitHub, Linkedin } from "react-feather";
 //
 //Define the infomation that the navigation needs to run
 export interface Iprops {
@@ -25,110 +32,96 @@ export interface Iprops {
 //
 //Navigation bar
 export const Navbar: React.FC<Iprops> = (props) => {
+  //
+  //Destructure the props
+  const { logo_src, pages, contact } = props;
+  //
+  //Contains my logo
+  const Logo = styled.img`
+    height: 100%;
+    width: 40px;
+    border-radius: 20%;
+  `;
+  //
+  //Holds the links to the various pages of my portfolio
+  const Navigation = styled.div`
+    flex: 6;
+    display: flex;
+    justify-content: center;
+  `;
+  //
+  //Holds the links to various social platforms
+  const Contact = styled.div`
+    flex: 1;
+  `;
+  //
+  //Customised unorderd list to menu
+  const List = styled.ul`
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  `;
+  //
+  //The navigation container styling
+  const Container = styled.nav`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 5%;
+    gap: 20px;
+    background: rgba(240, 232, 255, 0.603);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  `;
+  //
+  //Map the platform to its icon
+  //Record <key, Type> - useful utility in maping on object to another object
+  const platform_icons: Record<string, any> = {
+    Twitter: <Twitter />,
+    Instagram: <Instagram />,
+    GitHub: <GitHub />,
+    Linkedin: <Linkedin />,
     //
-    //Destructure the props
-    const { logo_src, pages, contact } = props;
-    //
-    //Contains my logo
-    const Logo = styled.img`
-        height: 50px;
-        width: 40px;
-        border-radius: 20%;
-    `;
-    //
-    //Holds the links to the various pages of my portfolio
-    const Navigation = styled.div`
-        font-size: 50px;
-        color: black;
-        -webkit-text-fill-color: white;
-        -webkit-text-stroke: 1px #000000;
-    `;
-    //
-    //Holds the links to various social platforms
-    const Contact = styled.div``;
-    //
-    //Customised unorderd list to menu
-    const List = styled.ul`
-        list-style: none;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-
-        li {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Style the a tags within the ul */
-        a {
-            text-decoration: none;
-            color: #051320;
-            padding: 10px 15px;
-            position: relative;
-            transition: all 0.3s ease-in-out;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                background-color: #c91c1c; /* Set the color of the line */
-                bottom: 0;
-                left: 0;
-                transition: width 0.3s ease-in-out;
-            }
-
-            &:hover {
-                &::after {
-                    width: 100%;
-                }
-            }
-        }
-    `;
-    //
-    //The navigation container styling
-    const Container = styled.nav`
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    `;
-    //
-    //Map the platform to its icon
-    //Record <key, Type> - useful utility in maping on object to another object
-    const platform_icons: Record<string, any> = {
-        Twitter: <Twitter />,
-        Instagram: <Instagram />,
-        GitHub: <GitHub />,
-        Linkedin: <Linkedin />,
-        //
-        //etc.
-    };
-    //
-    return (
-        <Container>
-            <Logo src={logo_src} alt="My logo"></Logo>
-            <Navigation>
-                <List>
-                    {pages.map((page, index) => (
-                        <li key={index}>
-                            <a href={'#' + page}>{page}</a>
-                        </li>
-                    ))}
-                </List>
-            </Navigation>
-            <Contact>
-                <List>
-                    {contact.map((social, index) => (
-                        <li>
-                            <a href={social.link} key={index}>
-                                {platform_icons[social.platform]}
-                            </a>
-                        </li>
-                    ))}
-                </List>
-            </Contact>
-        </Container>
-    );
+    //etc.
+  };
+  //
+  return (
+    <Container>
+      <Logo src={logo_src} alt="My logo"></Logo>
+      <Navigation>
+        <NavigationMenu>
+          <NavigationMenuList>
+            {pages.map((page) => (
+              <NavigationMenuItem>
+                <Button variant="ghost">
+                  <NavigationMenuLink href={"#" + page}>
+                    {page}
+                  </NavigationMenuLink>
+                </Button>
+              </NavigationMenuItem>
+            ))}
+          </NavigationMenuList>
+        </NavigationMenu>
+      </Navigation>
+      <Contact>
+        <List>
+          {contact.map((social, index) => (
+            <li>
+              <Button variant="ghost" size="icon">
+                <a href={social.link} key={index} target="_blank">
+                  {platform_icons[social.platform]}
+                </a>
+              </Button>
+            </li>
+          ))}
+        </List>
+      </Contact>
+    </Container>
+  );
 };
 
 // export default Navbar;
