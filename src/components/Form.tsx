@@ -1,14 +1,8 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import emailjs from '@emailjs/browser';
+import { useToast } from '@/components/ui/use-toast';
 
-//
-//Dfine the props
-interface Iprops {
-    ref: React.RefObject<HTMLFormElement | null>;
-    onSubmit: (e: Event) => void;
-    children: React.ReactNode;
-}
 //
 //Style the form to show in a column
 const Container: React.FC<{ children: React.ReactNode }> = styled.div`
@@ -27,7 +21,7 @@ const Container: React.FC<{ children: React.ReactNode }> = styled.div`
             width: 60%;
             padding: 20px;
             border: none;
-            background-color: #ecebeb;
+            background-color: #d3d7d7;
         }
         textarea {
             text-align: center;
@@ -35,7 +29,7 @@ const Container: React.FC<{ children: React.ReactNode }> = styled.div`
             padding: 20px;
             height: 80px;
             border: none;
-            background-color: #ecebeb;
+            background-color: #d3d7d7;
         }
         button {
             height: 30px;
@@ -43,6 +37,7 @@ const Container: React.FC<{ children: React.ReactNode }> = styled.div`
             align-self: center;
             border: none;
             border-radius: 10px;
+            background-color: #2986f0;
         }
     }
 `;
@@ -56,16 +51,21 @@ const Title: React.FC<{ children: React.ReactNode }> = styled.h1`
 //TODO: Style the button
 const Form: React.FC = () => {
     //
+    //on success
+    const [isSuccessfull, setSuccess] = useState(false);
+    //
     //Object that holds reference to the form element
     const form = useRef<HTMLFormElement | null>();
-
+    //
+    //
+    const { toast } = useToast();
     //
     //Handle the sending of the email
     const sendEmail = (event: Event) => {
         //
         //Prevent default submission behaviour
         event.preventDefault();
-
+        //
         //Actual submmission of the email
         emailjs
             .sendForm(
@@ -76,10 +76,23 @@ const Form: React.FC = () => {
             )
             .then(
                 (result) => {
-                    console.log(result.text);
+                    //
+                    //Alert the user on the success
+                    toast({
+                        title: result.text,
+                        description: 'Message was sent successfully',
+                    });
+                    //
+                    //Reflect operation was successfull
+                    setSuccess(!isSuccessfull);
                 },
                 (error) => {
-                    console.log(error.text);
+                    toast({
+                        style: { backgroundColor: 'green' },
+                        variant: 'destructive',
+                        title: 'Uh oh! Something went wrong.',
+                        description: error.message,
+                    });
                 }
             );
     };
