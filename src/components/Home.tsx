@@ -109,7 +109,7 @@ const Home = () => {
   return (
     //
     // The home section that displays the home page
-    <Section>
+    <Section id="Home">
       {/* The ProfileImage contains the image section in the home page */}
       <ProfileImage>
         <img src={profile} alt="My picture" />
