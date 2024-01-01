@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import {
   NavigationMenu,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -105,7 +104,6 @@ export const Navbar: React.FC<Iprops> = (props) => {
                 </Button>
               </NavigationMenuItem>
             ))}
-            <NavigationMenuIndicator></NavigationMenuIndicator>
           </NavigationMenuList>
         </NavigationMenu>
       </Navigation>
