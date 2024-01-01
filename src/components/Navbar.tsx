@@ -11,23 +11,23 @@ import { Instagram, Twitter, GitHub, Linkedin } from "react-feather";
 //
 //Define the infomation that the navigation needs to run
 export interface Iprops {
-  //
-  //The path to the logo
-  //"src\assets\logo\logo.jpg"
-  logo_src: string;
-  //
-  //The list of pages or sections to navigate to
-  //["Home", "About", "Portfolio", "Contact"]
-  pages: Array<string>;
-  //
-  //The social sites for contact
-  /*[
+    //
+    //The path to the logo
+    //"src\assets\logo\logo.jpg"
+    logo_src: string;
+    //
+    //The list of pages or sections to navigate to
+    //["Home", "About", "Portfolio", "Contact"]
+    pages: Array<string>;
+    //
+    //The social sites for contact
+    /*[
       {"Twitter","https://twitter.com/jay_more23"},
       {"GitHub","https://github.com/jamesmogaka"},
       {"Instagram","https://www.instagram.com/jay_more23/"},
       {"Linkedin","https://www.linkedin.com/in/james-mogaka-056b42217/"}
   ]*/
-  contact: Array<{ platform: string; link: string }>;
+    contact: Array<{ platform: string; link: string }>;
 }
 //
 //Navigation bar

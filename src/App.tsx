@@ -9,8 +9,6 @@ import bg from "./assets/bg.svg";
 //
 //Create a customized container
 const Container = styled.div`
-  padding: 0px;
-  margin: 0px;
   height: 100vh;
   background: url(${bg}) center/cover no-repeat;
   scroll-snap-type: y mandatory;
