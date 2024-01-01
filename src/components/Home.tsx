@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 // import CV from "../assets/CV (1).pdf";
 import profile from "../assets/profile_bg.png";
@@ -19,6 +18,7 @@ const Section = styled.div`
 const TextContainer = styled.div`
   flex: 2;
   margin-right: 20px;
+
   // The css styling to my page
   h1 {
     font-size: 40px;
@@ -38,6 +38,7 @@ const TextContainer = styled.div`
   h1 + h1 {
     margin-left: 70px;
     border-right: 4px solid #000;
+    margin-bottom: 2px;
     animation: cursor 1s infinite step-end, typing 10s infinite steps(20, end);
     white-space: nowrap;
     overflow: hidden;
@@ -48,10 +49,10 @@ const TextContainer = styled.div`
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
-    margin: 10px;
+    margin-top: 10px;
+    margin-left: 25%;
+    align-self: center;
     cursor: pointer;
-
-    transition: background-color 0.3s ease;
     a {
       text-decoration: none;
       color: white;
