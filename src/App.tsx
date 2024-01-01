@@ -4,7 +4,7 @@ import Portfolio from "./components/Portfolio";
 import About from "./components/About";
 import styled from "styled-components";
 import { Navbar } from "./components/Navbar";
-import bg from "./assets/shape.svg";
+import bg from "./assets/bg.svg";
 
 //
 //Create a customized container

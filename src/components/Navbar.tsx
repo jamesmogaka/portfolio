@@ -1,5 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
 import { Instagram, Twitter, GitHub, Linkedin } from "react-feather";
 //
 //Define the infomation that the navigation needs to run
@@ -107,13 +117,11 @@ export const Navbar: React.FC<Iprops> = (props) => {
     <Container>
       <Logo src={logo_src} alt="My logo"></Logo>
       <Navigation>
-        <List>
-          {pages.map((page, index) => (
-            <li key={index}>
-              <a href={"#" + page}>{page}</a>
-            </li>
-          ))}
-        </List>
+        <NavigationMenu>
+          <NavigationMenuList>
+            
+          </NavigationMenuList>
+        </NavigationMenu>
       </Navigation>
       <Contact>
         <List>
