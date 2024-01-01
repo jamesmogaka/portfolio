@@ -5,9 +5,10 @@ import styled from 'styled-components';
 
 //
 //The container to hold the annimated destination
-const Container: React.FC<{ ref: React.MutableRefObject<null> }> = styled.div`
-    width: '32px';
+const Container: React.FC<{ ref: React.MutableRefObject<null> }> = styled.svg`
+    width: '32px ';
     height: '32px';
+    fill: 'black';
 `;
 
 //
@@ -32,7 +33,7 @@ const Destination: React.FC = () => {
         };
     }, []);
 
-    return <Container ref={containerRef}></Container>;
+    return <svg ref={containerRef}></svg>;
 };
 
 export default Destination;

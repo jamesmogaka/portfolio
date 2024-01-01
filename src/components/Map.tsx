@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MapPin } from 'react-feather';
 import {
     ComposableMap,
     Geographies,
@@ -22,7 +23,7 @@ const Styled_geography = styled(Geography)`
 //     padding: 0px;
 // `;
 //
-//This is a map that will be displayed on the right of the contact form
+//This is a map that will be displayed  on the right of the contact form
 //
 //This function is to return a react functional component wihtout properties
 //TODO: Style the map !!!
@@ -46,12 +47,14 @@ const Map: React.FC = () => (
 
         <Marker
             coordinates={[36.8219, 1.2921]}
-            style={{ default: { fill: 'none' } }}
+            style={{
+                default: {
+                    width: '30',
+                    height: '30',
+                },
+            }}
         >
-            {/* <Destination /> */}
-            <circle r={100} fill="transparent">
-                <Destination />
-            </circle>
+            <MapPin />
         </Marker>
     </ComposableMap>
 );

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Map from './Map';
 import Form from './Form';
-import Destination from './Destination';
 //
 //Create customized container
 const Section: React.FC<{ children: React.ReactNode }> = styled.div`
@@ -36,7 +35,6 @@ const Contact: React.FC = () => {
             <Right>
                 <Map></Map>
             </Right>
-            {/* <Destination /> */} 
         </Section>
     );
 };
