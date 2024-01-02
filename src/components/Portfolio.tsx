@@ -18,8 +18,8 @@ const Section = styled.div`
 const Portfolio = () => {
     return (
         <Section>
-            <Tabs defaultValue="account" className="w-[400px]">
-                <TabsList>
+            <Tabs defaultValue="web" className="w-10/12 h-full">
+                <TabsList className="">
                     <TabsTrigger value="web">Web</TabsTrigger>
                     <TabsTrigger value="android">Android</TabsTrigger>
                 </TabsList>

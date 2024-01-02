@@ -1,4 +1,4 @@
-import React from 'react';
+import styled from 'styled-components';
 
 const Android = () => {
     return <div>Android</div>;
