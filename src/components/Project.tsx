@@ -1,15 +1,9 @@
 import { Button } from '@/components/ui/button';
 import { GitHub, Globe } from 'react-feather';
-import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent, CardFooter } from '@/components/ui/card';
 //
 //The requirments to show a project card
-interface Iproject {
+export interface Iproject {
     //
     //The name of the project
     name: string;
@@ -19,34 +13,30 @@ interface Iproject {
     //
     //A brief description on the project
     description: string;
-    //
+    //8
     //The url of the product
     product?: string;
     //
     //The github repository for the code if present
     code?: string;
 }
+
 //
 //The actual card
-const Project: React.FC<Iproject> = (props: Iproject) => {
+export const Project: React.FC<Iproject> = (props: Iproject) => {
     return (
-        <Card className=" w-1/4 h-1/2">
-            <CardHeader>
-                <CardTitle className="text-center">{props.name}</CardTitle>
-            </CardHeader>
-            <CardContent className="">
-                <img
-                    src={props.image}
-                    alt="Project image"
-                    className="max-h-[60%] max-w-[100%]"
-
-                />
+        <Card className=" w-5/6 ">
+            <CardContent className=" p-0 m-0 flex flex-col justify-center alig items-center">
+                <div
+                    className={`bg-[url('${props.image}')] bg-cover bg-center block w-fill h-[150px] max-h-[150px]`}
+                ></div>
+                <h2>{props.name}</h2>
                 <p>{props.description}</p>
             </CardContent>
             <CardFooter className="grid-cols-2 gap-2">
                 {props.product && (
                     <Button className="w-11/12">
-                        <a href={props.product}>
+                        <a href={props.product} className="w-full">
                             <Globe className="inline" /> Checkout
                         </a>
                     </Button>
@@ -62,5 +52,3 @@ const Project: React.FC<Iproject> = (props: Iproject) => {
         </Card>
     );
 };
-
-export default Project;

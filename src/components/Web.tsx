@@ -1,58 +1,68 @@
-import styled from 'styled-components';
-import Project from './Project';
-import image from "../assets/profile.jpeg"
-
+import { Project, Iproject } from './Project';
+import image from '../assets/profile.png';
 //
-//Define the container to hold all the cards
-const Container = styled.div`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-`;
+//Fill in the array of projects to display
+const projects: Array<Iproject> = [
+    {
+        name: 'Portfolio',
+        image: image,
+        description: 'this is a sample of my personal portfolio',
+        product: 'link',
+        code: 'link',
+    },
+    {
+        name: 'Portfolio',
+        image: image,
+        description: 'this is a sample of my personal portfolio',
+        product: 'link',
+        code: 'link',
+    },
+    {
+        name: 'Portfolio',
+        image: image,
+        description: 'this is a sample of my personal portfolio',
+        product: 'link',
+        code: 'link',
+    },
+    {
+        name: 'Chess',
+        image: image,
+        description: 'This is a simple chess game created using react',
+        product: 'link',
+        code: 'link',
+    },
+    {
+        name: 'Chess',
+        image: image,
+        description: 'This is a simple chess game created using react',
+        product: 'link',
+        code: 'link',
+    },
+    {
+        name: 'Chess',
+        image: image,
+        description: 'This is a simple chess game created using react',
+        product: 'link',
+        code: 'link',
+    },
+];
 
 const Web = () => {
     return (
-        <Container>
-            <Project
-                name="Portfolio"
-                image={image}
-                description="this is a sample of my personal portfolio"
-                product="link"
-                code="link"
-            />
-            <Project
-                name="Portfolio"
-                image="img"
-                description="this is a sample of my personal portfolio"
-                product="link"
-                code="link"
-            />
-            <Project
-                name="Portfolio"
-                image="img"
-                description="this is a sample of my personal portfolio"
-                product="link"
-                code="link"
-            />
-            <Project
-                name="Portfolio"
-                image="img"
-                description="this is a sample of my personal portfolio"
-                product="link"
-                code="link"
-            />
-            <Project
-                name="Portfolio"
-                image="img"
-                description="this is a sample of my personal portfolio"
-                product="link"
-                code="link"
-            />
-        </Container>
+        <div
+            className=" w-full h-[85vh] grid grid-cols-3 grid-rows-[repeat(2, scale-49)] gap-y-2 justify-items-center
+        "
+        >
+            {projects.map((project) => (
+                <Project
+                    name={project.name}
+                    image={project.image}
+                    description={project.description}
+                    product={project.product}
+                    code={project.code}
+                />
+            ))}
+        </div>
     );
 };
 
