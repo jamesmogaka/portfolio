@@ -45,12 +45,19 @@ const projects: Array<Iproject> = [
         product: 'link',
         code: 'link',
     },
+    {
+        name: 'Chess',
+        image: image,
+        description: 'This is a simple chess game created using react',
+        product: 'link',
+        code: 'link',
+    },
 ];
 
 const Web = () => {
     return (
         <div
-            className=" w-full h-[85vh] grid grid-cols-3 grid-rows-[repeat(2, scale-49)] gap-y-2 justify-items-center
+            className="grid grid-cols-3 grid-rows-2 gap-y-[10px] justify-items-center
         "
         >
             {projects.map((project) => (

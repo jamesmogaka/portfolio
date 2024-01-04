@@ -6,27 +6,28 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 //
 //Create a customized container
 const Section = styled.div`
-    height: 100vh;
-    width: 100%;
+    height: 100dvh;
+    width: 100dvw;
     padding-top: 50px;
     scroll-snap-align: center;
     display: flex;
     justify-content: center;
+    align-items: center;
 `;
 //
 //Create a page to showcase my current and previous works
 const Portfolio = () => {
     return (
         <Section>
-            <Tabs defaultValue="web" className="w-10/12 h-full">
+            <Tabs defaultValue="web" className="w-10/12 h-full overflow-auto">
                 <TabsList className="">
                     <TabsTrigger value="web">Web</TabsTrigger>
                     <TabsTrigger value="android">Android</TabsTrigger>
                 </TabsList>
-                <TabsContent value="web">
+                <TabsContent value="web" className="h-[85dvh]">
                     <Web />
                 </TabsContent>
-                <TabsContent value="android">
+                <TabsContent value="android" className=" h-[85dvh]">
                     <Android />
                 </TabsContent>
             </Tabs>

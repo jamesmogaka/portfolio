@@ -29,7 +29,7 @@ const projects: Array<Iproject> = [
 const Android = () => {
     return (
         <div
-            className=" w-full h-[85vh] grid grid-cols-3 grid-rows-[repeat(2, '49%')] gap-y-2 justify-items-center
+            className="grid grid-cols-3 grid-rows-2 gap-y-[10px] justify-items-center
         "
         >
             {projects.map((project) => (
