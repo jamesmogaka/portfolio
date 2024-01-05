@@ -61,6 +61,7 @@ export const Navbar: React.FC<Iprops> = (props) => {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    
   `;
   //
   //The navigation container styling
