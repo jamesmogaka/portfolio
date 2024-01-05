@@ -45,20 +45,14 @@ const projects: Array<Iproject> = [
         product: 'link',
         code: 'link',
     },
-    {
-        name: 'Chess',
-        image: image,
-        description: 'This is a simple chess game created using react',
-        product: 'link',
-        code: 'link',
-    },
 ];
 
 const Web = () => {
     return (
         <div
-            className="grid grid-cols-3 grid-rows-2 gap-y-[10px] justify-items-center
+            className="grid grid-cols-3 gap-y-[10px] justify-items-center
         "
+            style={{ gridTemplateRows: 'repeat(2, 45%)' }}
         >
             {projects.map((project) => (
                 <Project

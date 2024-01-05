@@ -15,11 +15,13 @@ const Section = styled.div`
     align-items: center;
 `;
 //
-//Create a page to showcase my current and previous works
+//Create a page to showcase my current and previous works overflow-auto
+//
+//Todo: Deside on what to do with the overflow
 const Portfolio = () => {
     return (
         <Section>
-            <Tabs defaultValue="web" className="w-10/12 h-full overflow-auto">
+            <Tabs defaultValue="web" className="w-10/12 h-full ">
                 <TabsList className="">
                     <TabsTrigger value="web">Web</TabsTrigger>
                     <TabsTrigger value="android">Android</TabsTrigger>

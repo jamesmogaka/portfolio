@@ -25,17 +25,17 @@ export interface Iproject {
 //The actual card
 export const Project: React.FC<Iproject> = (props: Iproject) => {
     return (
-        <Card className=" w-[90%] flex flex-col">
-            <CardContent className=" flex flex-col justify-center items-center flex-grow">
+        <Card className=" pb-3 w-[90%] h-auto max-h-[100%] flex flex-col overflow-hidden">
+            <CardContent className=" p-0 flex flex-col justify-center items-center ">
                 <img
                     src={props.image}
                     alt="This is the project image"
-                    className=" flex-grow"
+                    className=" flex-grow w-full max-h-52 object-cover"
                 />
-                <h2>{props.name}</h2>
-                <p>{props.description}</p>
+                <h2 className="text-lg">{props.name}</h2>
+                <p className=" text-sm">{props.description}</p>
             </CardContent>
-            <CardFooter className="grid-cols-2 gap-2">
+            <CardFooter className=" gap-1 ">
                 {props.product && (
                     <Button className="w-11/12">
                         <a href={props.product} className="w-full">
