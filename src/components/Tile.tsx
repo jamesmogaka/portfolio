@@ -12,14 +12,14 @@ export interface Iprops {
     items: Array<{ name: string; icon: ReactNode }>;
 }
 
-export const Tile: React.FC<Iprops> = (props: Iprops) => {
+export const Tile: React.FC<Iprops> = ({ title, items }) => {
     return (
         <Card className=" max-w-96 flex flex-col items-center gap-10 bg-transparent backdrop-filter backdrop-blur-sm">
             <CardHeader>
-                <CardTitle>{props.title}</CardTitle>
+                <CardTitle>{title}</CardTitle>
             </CardHeader>
             <CardContent className=" flex flex-wrap gap-2 ">
-                {props.items.map((item) => (
+                {items.map((item) => (
                     <div className=" flex bg-slate-300 p-1 gap-1 rounded-lg">
                         {item.icon}
                         {item.name}
