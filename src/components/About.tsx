@@ -3,11 +3,13 @@ import { Tile, Iprops } from './Tile';
 import { Button } from './ui/button';
 import * as icons from './Icons';
 import { GitHub } from 'react-feather';
+import bg from '../assets/shape.svg';
 //
 //Create a custom container
 const Section = styled.div`
     height: 100vh;
     scroll-snap-align: center;
+    background: url(${bg}) center/cover no-repeat;
     padding-top: 50px;
     display: flex;
     flex-direction: column;
@@ -97,7 +99,7 @@ const about = () => {
     return (
         <Section>
             <h1 className="text-xl">About me</h1>
-            <p className="text-center max-w-xl p-4 rounded-lg shadow-md">
+            <p className="text-center max-w-xl p-4 rounded-lg shadow-md backdrop-filter backdrop-blur-sm">
                 Hello! I'm Mogaka, a dedicated software developer with a passion
                 for crafting innovative solutions. My expertise spans various
                 programming languages and technologies, enabling me to tackle
