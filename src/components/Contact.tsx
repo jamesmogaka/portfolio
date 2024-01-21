@@ -28,7 +28,7 @@ const Right: React.FC<{ children: React.ReactNode }> = styled.div`
 //TODO: Style the contact page
 const Contact: React.FC = () => {
     return (
-        <Section>
+        <Section id="contact">
             <Left>
                 <Form></Form>
             </Left>

@@ -31,7 +31,7 @@ export const Project: React.FC<Iproject> = ({
     code,
 }) => {
     return (
-        <Card className=" pb-3 w-[90%] h-auto max-h-[100%] flex flex-col overflow-hidden">
+        <Card className=" pb-3 w-[90%] h-auto max-h-[100%] flex flex-col overflow-hidden bg-transparent shadow-md backdrop-filter backdrop-blur-sm">
             <CardContent className=" p-0 flex flex-col justify-center items-center ">
                 <img
                     src={image}

@@ -97,7 +97,7 @@ const info: Array<Iprops> = [
 //About-me page component
 const about = () => {
     return (
-        <Section>
+        <Section id="about">
             <h1 className="text-xl">About me</h1>
             <p className="text-center max-w-xl p-4 rounded-lg shadow-md backdrop-filter backdrop-blur-sm">
                 Hello! I'm Mogaka, a dedicated software developer with a passion

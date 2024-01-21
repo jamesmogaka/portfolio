@@ -20,7 +20,7 @@ const Section = styled.div`
 //Todo: Deside on what to do with the overflow
 const Portfolio = () => {
     return (
-        <Section>
+        <Section id="portfolio">
             <Tabs defaultValue="web" className="w-10/12 h-full ">
                 <TabsList className="">
                     <TabsTrigger value="web">Web</TabsTrigger>
