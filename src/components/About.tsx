@@ -1,23 +1,8 @@
-import styled from 'styled-components';
 import { Tile, Iprops } from './Tile';
 import { Button } from './ui/button';
 import * as icons from './Icons';
 import { GitHub } from 'react-feather';
-import bg from '../assets/shape.svg';
-//
-//Create a custom container
-const Section = styled.div`
-    height: 100vh;
-    scroll-snap-align: center;
-    background: url(${bg}) center/cover no-repeat;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    padding-bottom: 24px;
-`;
+// import bg from '../assets/shape.svg';
 //
 //The props to pass to the tile component
 const info: Array<Iprops> = [
@@ -97,7 +82,10 @@ const info: Array<Iprops> = [
 //About-me page component
 const about = () => {
     return (
-        <Section id="about">
+        <div
+            id="about"
+            className="h-screen snap-center pt-[10%] pb-6 flex flex-col gap-6 justify-center items-center sm:gap-3 sm:pt-[5%]"
+        >
             <h1 className="text-xl">About me</h1>
             <p className="text-center max-w-xl p-4 rounded-lg shadow-md backdrop-filter backdrop-blur-sm">
                 Hello! I'm Mogaka, a dedicated software developer with a passion
@@ -115,7 +103,7 @@ const about = () => {
                     <Tile title={tile.title} items={tile.items}></Tile>
                 ))}
             </div>
-        </Section>
+        </div>
     );
 };
 
