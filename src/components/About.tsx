@@ -84,21 +84,19 @@ const about = () => {
     return (
         <div
             id="about"
-            className="h-screen snap-center pt-[10%] pb-6 flex flex-col gap-6 justify-center items-center sm:gap-3 sm:pt-[5%]"
+            className="h-screen snap-center pt-[10%] pb-6 flex flex-col gap-2 justify-center items-center sm:gap-6 sm:pt-[5%]"
         >
-            <h1 className="text-xl">About me</h1>
-            <p className="text-center max-w-xl p-4 rounded-lg shadow-md backdrop-filter backdrop-blur-sm">
-                Hello! I'm Mogaka, a dedicated software developer with a passion
-                for crafting innovative solutions. My expertise spans various
-                programming languages and technologies, enabling me to tackle
-                diverse challenges in web and mobile development. Committed to
-                delivering high-quality code, I thrive on turning ideas into
-                reality. I value collaboration, believing that the best software
-                emerges from a collective effort. Let's connect and bring your
-                projects to life through the language of technology!
+            <h1 className="text-lg sm:text-xl">About me</h1>
+            <p className="text-center max-w-xl p-4 ml-3 mr-3 rounded-lg shadow-md backdrop-filter backdrop-blur-sm text-sm sm:text-base">
+                Mogaka is an enthusiastic software developer skilled in various
+                programming languages and technologies, specializing in web and
+                mobile development. Committed to delivering high-quality code,
+                Mogaka enjoys transforming ideas into reality and values
+                collaboration in software development. Ready to connect and
+                contribute to bringing your projects to life through technology.
             </p>
             <Button variant="ghost">Resume</Button>
-            <div className="flex gap-8 ">
+            <div className=" ml-3 mr-3 flex gap-8 flex-col sm:flex-row ">
                 {info.map((tile) => (
                     <Tile title={tile.title} items={tile.items}></Tile>
                 ))}
