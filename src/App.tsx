@@ -10,7 +10,7 @@ import { Toaster } from '@/components/ui/toaster';
 //
 //Create a customized container
 const Container = styled.div`
-    height: 100vh;
+    height: 100dvh;
     background: url(${bg}) center/cover no-repeat;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;

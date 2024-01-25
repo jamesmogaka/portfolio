@@ -9,26 +9,26 @@ const Home = () => {
         // The home section that displays the home page
         <div
             id="home"
-            className=" h-dvh snap-center flex flex-col pt-[10%] gap-6 justify-center items-center sm:flex-row sm:justify-center sm:items-center sm:pt-[5%]"
+            className="h-screen snap-center pt-[10%] flex flex-col gap-6 justify-center items-center sm:flex-row sm:gap-3 sm:pt-[5%]"
         >
             <img
                 src={profile}
                 alt="My picture"
-                className=" sm:max-w-full max-w-[60%] h-[50%] md:h-auto object-cover rounded-[50%] transition-all duration-300 ease-in-out transform hover:scale-110 left-44 "
+                className="max-w-[60%] rounded-[50%] object-cover transition-all duration-300 ease-in-out transform hover:scale-110 left-44 sm:max-w-[40%]"
             />
 
-            <div className=" flex-grow w-full ">
+            <div className="w-full text margin sm:ml-[10%] flex-grow lg:ml-[15%]">
                 <h3>Hello,</h3>
-                <h1 className=" text-3xl">
+                <h1 className=" sm:text-3xl text-[2.25rem] md:leading-[3rem]">
                     I'm
                     <span className="typing text-blue-700 inline-block relative align-middle">
                         &nbsp;James Mogaka.
                     </span>
                 </h1>
-                <h1 className="cursor text-3xl ml-[70px] border-r-4 border-solid border-black mb-2">
+                <h1 className="cursor  ml-[50px] border-r-4 border-solid border-black mb-2 text-[2.25rem] sm:text-3xl md:mb-2 md:leading-[3rem]">
                     a digital craftsman.
                 </h1>
-                <h1 className="cursor  text-3xl ml-[70px] border-r-4 border-solid border-black mb-2">
+                <h1 className="cursor ml-[50px] border-r-4 border-solid border-black mb-2 text-[2.25rem] sm:text-3xl md:mb-2 md:leading-[3rem]">
                     a software engineer.
                 </h1>
 

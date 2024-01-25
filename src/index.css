@@ -76,7 +76,7 @@
 }
 
 .typing {
-    animation: typing 10s infinite steps(20, end);
+    animation: short 10s infinite steps(20, end);
     white-space: nowrap;
     overflow: hidden;
 }
@@ -99,6 +99,18 @@
     }
 }
 
+@keyframes short {
+    0%,
+    90%,
+    100% {
+        width: 0ch;
+    }
+    30%,
+    80% {
+        width: 13ch;
+    }
+}
+
 @keyframes cursor {
     0%,
     100% {
@@ -107,5 +119,23 @@
 
     50% {
         border-color: #000;
+    }
+}
+
+@media only screen and (max-width: 345px) {
+    .text {
+        margin-left: 10%;
+        h1 {
+            font-size: 1.9rem;
+        }
+        h1 + h1 {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 390px) {
+    .margin {
+        margin-left: 18%;
     }
 }
