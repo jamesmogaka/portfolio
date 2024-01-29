@@ -9,7 +9,7 @@ const Home = () => {
         // The home section that displays the home page
         <div
             id="home"
-            className="h-screen snap-center pt-[10%] flex flex-col gap-6 justify-center items-center sm:flex-row sm:gap-3 sm:pt-[5%]"
+            className="h-screen snap-center pt-[10%] flex flex-col gap-6 justify-center items-center overflow-hidden sm:flex-row sm:gap-3 sm:pt-[5%]"
         >
             <img
                 src={profile}

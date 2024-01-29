@@ -1,6 +1,7 @@
 import { Tile, Iprops } from './Tile';
 import { Button } from './ui/button';
 import * as icons from './Icons';
+
 import { GitHub } from 'react-feather';
 // import bg from '../assets/shape.svg';
 //
@@ -84,7 +85,7 @@ const about = () => {
     return (
         <div
             id="about"
-            className="h-screen snap-center pt-[10%] pb-6 flex flex-col gap-2 justify-center items-center sm:gap-6 sm:pt-[5%]"
+            className=" box-border overflow-hidden h-screen snap-center pt-[10%] pb-6 flex flex-col gap-2 justify-center items-center sm:gap-6 sm:pt-[5%]"
         >
             <h1 className="text-lg sm:text-xl">About me</h1>
             <p className="text-center max-w-xl p-4 ml-3 mr-3 rounded-lg shadow-md backdrop-filter backdrop-blur-sm text-sm sm:text-base">
@@ -96,7 +97,7 @@ const about = () => {
                 contribute to bringing your projects to life through technology.
             </p>
             <Button variant="ghost">Resume</Button>
-            <div className=" ml-3 mr-3 flex gap-8 flex-col sm:flex-row ">
+            <div className=" ml-3 mr-3 flex gap-8 flex-row flex-wrap0 sm:flex-nowrap ">
                 {info.map((tile) => (
                     <Tile title={tile.title} items={tile.items}></Tile>
                 ))}
