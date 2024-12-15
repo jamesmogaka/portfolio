@@ -1,12 +1,9 @@
 import { Project, Iproject } from './Project';
-import image from '../assets/profile.png';
-
 //
 // The collection of android projects to display
 const projects: Array<Iproject> = [
     {
         name: 'Mdundo',
-        image: image,
         description:
             'A personal music player to collect music data that i like and i will use it to further learn buiding of a recomentation algorithm',
     },

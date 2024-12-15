@@ -1,13 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { GitHub, Globe } from 'react-feather';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
+import def from '../assets/def.png';
 
 // The requirments to show a project card
 export interface Iproject {
     // The name of the project
     name: string;
     // Small sample for the project
-    image: string;
+    image?: string;
     // A brief description on the project
     description: string;
     // The url of the product
@@ -21,7 +22,11 @@ export const Project: React.FC<Iproject> = ({ image, name, description, product,
     return (
         <Card className="pb-2 w-[90%] h-auto max-h-[100%] flex flex-col overflow-hidden bg-transparent shadow-md backdrop-filter backdrop-blur-sm dark:bg-transparent dark:backdrop-filter dark:backdrop-blur-sm">
             <CardContent className="p-0 flex flex-col justify-center items-center">
-                <img src={image} alt="This is the project image" className="flex-grow w-full max-h-52 object-cover" />
+                <img
+                    src={image ?? def}
+                    alt="This is the project image"
+                    className="flex-grow w-full max-h-52 object-cover"
+                />
                 <h2 className="text-lg mt-2 sm:mt-4">{name}</h2>
                 <p className="text-sm mt-1 sm:mt-2 mb-2 sm:mb-4">{description}</p>
             </CardContent>
