@@ -1,16 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import lottie from 'lottie-web';
 import animationData from '../assets/destination.json';
-import styled from 'styled-components';
-
-//
-//The container to hold the annimated destination
-const Container: React.FC<{ ref: React.MutableRefObject<null> }> = styled.svg`
-    width: '32px ';
-    height: '32px';
-    fill: 'black';
-`;
-
 //
 //This is the component to render the animated destination icon
 const Destination: React.FC = () => {
