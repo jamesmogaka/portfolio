@@ -32,11 +32,11 @@ const Home = () => {
                 <div className="flex flex-col">
                     <span className="text-2xl sm:text-3xl font-bold">I'm</span>
 
-                    <h1 className="text-blue-700 typing text-2xl sm:text-3xl font-bold -mt-8 ml-[4ch]">
+                    <h1 className="text-blue-700 typing text-2xl sm:text-3xl font-bold -mt-9 ml-[4ch]">
                         James Mogaka.
                     </h1>
 
-                    <h2 className="typing text-lg sm:text-xl ml-[5ch] sm:ml-[6ch] -mt-1">a digital craftsman.</h2>
+                    <h2 className="cursor text-lg sm:text-xl ml-[5ch] sm:ml-[6ch] -mt-1">a digital craftsman.</h2>
 
                     <h2 className="cursor text-lg sm:text-xl ml-[5ch] sm:ml-[6ch] -mt-1">a software engineer.</h2>
                 </div>
