@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin } from 'react-feather';
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps';
+import features from '../assets/features.json';
 
 interface MapProps {
     isDarkTheme: boolean;
@@ -18,13 +19,13 @@ const Map: React.FC<MapProps> = ({ isDarkTheme }) => (
             }}
             className="max-w-full max-h-full"
         >
-            <Geographies geography="/features.json">
+            <Geographies geography={features}>
                 {({ geographies }) =>
                     geographies.map((geo) => (
-                        <Geography 
-                            key={geo.rsmKey} 
-                            geography={geo} 
-                            className={`fill-transparent ${isDarkTheme ? 'stroke-white' : 'stroke-black'}`} 
+                        <Geography
+                            key={geo.rsmKey}
+                            geography={geo}
+                            className={`fill-transparent ${isDarkTheme ? 'stroke-white' : 'stroke-black'}`}
                         />
                     ))
                 }
