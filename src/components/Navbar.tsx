@@ -7,11 +7,13 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu } from 'lucide-react';
 import React from 'react';
+import logo_dark from '../assets/logo_dark.webp';
+import logo_light from '../assets/logo_light.webp';
 
 // Interface for the main Navbar component props
 export interface NavbarProps {
     // Path to the logo image
-    logo_src: string;
+    isDarkTheme: boolean;
     // List of page names for navigation
     pages: string[];
     // Social media contact links
@@ -19,11 +21,12 @@ export interface NavbarProps {
     toggleTheme: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ logo_src, pages, contact, toggleTheme }) => {
+export const Navbar: React.FC<NavbarProps> = ({ isDarkTheme, pages, contact, toggleTheme }) => {
+    //
     // State to track mobile menu visibility
     // Determines whether the sliding menu is open or closed
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+    //
     // Toggle mobile menu visibility
     // Switches between open and closed states
     const toggle_menu = () => {
@@ -46,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ logo_src, pages, contact, toggle
                 `}
             >
                 {/* Logo section */}
-                <img src={logo_src} alt="Logo" className="h-full w-10 rounded-[20%]" />
+                <img src={isDarkTheme ? logo_dark : logo_light} alt="Logo" className="h-full w-10 rounded-[20%]" />
 
                 {/* Desktop navigation links */}
                 <div className="flex flex-[6] justify-center">

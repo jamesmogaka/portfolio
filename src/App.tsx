@@ -58,13 +58,10 @@ function App() {
         }
     }, []);
     //
-    //The image src
-    const logo_src: string = isDarkTheme ? 'src/assets/logo_dark.webp' : 'src/assets/logo_light.webp';
-    //
     //The avilable pages for navigation
     const pages: Array<string> = ['Home', 'About', 'Portfolio', 'Contact'];
     //
-    //The social platforms avilable for contact
+    //The social platforms avilable for contact./src/assets/logo_dark.webp
     const contact: Array<{ platform: string; link: string }> = [
         { platform: 'Twitter', link: 'https://twitter.com/jay_more23' },
 
@@ -81,7 +78,7 @@ function App() {
     ];
     return (
         <Container style={{ background: `url(${isDarkTheme ? bgDark : bg}) center/cover no-repeat` }}>
-            <Navbar logo_src={logo_src} pages={pages} contact={contact} toggleTheme={toggleTheme} />
+            <Navbar isDarkTheme={isDarkTheme} pages={pages} contact={contact} toggleTheme={toggleTheme} />
             <div className="flex-1 mb-[-20px] sm:mb-0">
                 <Home />
             </div>
